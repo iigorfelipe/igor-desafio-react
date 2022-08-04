@@ -20,7 +20,6 @@
         "react", "prettier"
     ],
     "rules": {
-        "import/no-unresolved": "error",
         "prettier/prettier": "error"
     }
 }
