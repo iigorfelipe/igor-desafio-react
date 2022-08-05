@@ -1,10 +1,10 @@
 import React from "react";
-import Main from "./pages/Main";
+import AppRoutes from "./routes";
 import GithubProvider from "./providers/GithubProvider";
 
 const App = () => (
   <GithubProvider>
-    <Main />
+    <AppRoutes />
   </GithubProvider>
 );
 
