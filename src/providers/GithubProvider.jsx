@@ -3,13 +3,19 @@ import GithubContext from "./GithubContext";
 import PropTypes from "prop-types";
 
 const GithubProvider = ({ children }) => {
-  const [inputValue, setInputValue] = useState("");
+  const [searchInputValue, setSearchInputValue] = useState("");
+  const [userInformation, setUserInformation] = useState({
+    infos: "",
+    repos: "",
+  });
 
   return (
     <GithubContext.Provider
       value={{
-        inputValue,
-        setInputValue,
+        setSearchInputValue,
+        searchInputValue,
+        userInformation,
+        setUserInformation,
       }}
     >
       {children}
