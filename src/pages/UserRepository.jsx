@@ -7,46 +7,51 @@ const UserRepository = () => {
     userInformation: { infos, repos },
   } = useContext(GithubContext);
 
-  console.log("INFOS>>>>", infos);
-  console.log("");
-  console.log("REPOS>>>>", repos);
-
   return (
     <div>
       {infos && repos.length && (
-        <div>
-          <div>
-            <img src={infos.avatar_url} alt="" />
+        <div className="user-container">
+          <div className="user-infos-container">
+            <img className="user-img" src={infos.avatar_url} alt="" />
 
-            <div>
-              <span>{infos.name}</span>
-              <span>{"user"}</span>
+            <div className="user-name-container">
+              <span className="user-name">{infos.name}</span>
+              <span className="user-login">{infos.login}</span>
             </div>
 
-            <button>follow</button>
+            <button>Follow</button>
 
-            <div>
-              <span>{"@user"}</span>
+            <div className="user-details-container">
+              <span>{infos.twitter_username}</span>
 
-              <div>
-                <span>icon {infos.followers} followers</span>
+              <div className="user-followers-container">
+                <span>{infos.followers} followers</span>
                 <span>{infos.following} following</span>
-                <span>icon {}</span>
+                <span>{}</span>
               </div>
 
-              <span>icon {infos.email}</span>
+              <span>{infos.email}</span>
             </div>
           </div>
 
-          <div>
-            <span>icon Repositories {repos.length}</span>
-            {repos.map((item, index) => (
-              <div key={index}>
-                <span>{item.name}</span>
-                <span>{item.language}</span>
-                <span>{item.created_at}</span>
-              </div>
-            ))}
+          <div className="repository-container">
+            <span className="repository-length">
+              Repositories {infos.public_repos}
+            </span>
+
+            <div className="repositories">
+              {repos.map((repo, index) => (
+                <div key={index} className="repository-infos">
+                  <span className="repository-name">{repo.name}</span>
+
+                  <div className="repository-details">
+                    <span className="repository-language">{repo.language}</span>
+
+                    <span>Updated on {repo.created_at}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       )}
