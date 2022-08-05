@@ -1,0 +1,47 @@
+.user-infos-container {
+  padding-top: 10px;
+  margin-right: 20px;
+}
+
+.user-img {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  border: none;
+}
+
+.user-name-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.user-name {
+  font-size: x-large;
+}
+
+.user-login {
+  font-weight: 300;
+}
+
+.user-details-container {
+  padding-bottom: 20px;
+  border-bottom: solid 1px gray;
+}
+
+.user-infos-container button {
+  width: 100%;
+  background: transparent;
+  border: 1px solid gray;
+  border-radius: 5px;
+  font-size: medium;
+  padding: 8px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.user-followers-container {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}

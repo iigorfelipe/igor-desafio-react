@@ -1,0 +1,37 @@
+.repository-container {
+  width: 100%;
+  padding-top: 10px;
+  margin-left: 20px;
+}
+
+.repository-length {
+  padding-bottom: 10px;
+  border-bottom: solid 2px red;
+}
+
+.repositories {
+  padding-top: 50px;
+}
+
+.repository-infos {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.repository-details {
+  padding-top: 15px;
+  padding-bottom: 30px;
+  border-bottom: solid 1px gray;
+}
+
+.repository-name {
+  margin-bottom: 10px;
+  font-size: large;
+  font-weight: 500;
+  color: rgb(0, 110, 255);
+}
+
+.repository-language {
+  margin-right: 20px;
+}
