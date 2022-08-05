@@ -3,6 +3,7 @@ import getUser from "../apis/github/request/getUser";
 import getStar from "../apis/github/request/getStars";
 import GithubContext from "../providers/GithubContext";
 import getRepository from "../apis/github/request/getRepository";
+import { IoIosSearch } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import "../css/search.css";
 
@@ -30,6 +31,9 @@ const SearchButton = () => {
       className="search-button"
       onClick={() => saveUsersInformation(searchInputValue)}
     >
+      <span className="icon-search-btn">
+        <IoIosSearch />
+      </span>
       Buscar
     </button>
   );
