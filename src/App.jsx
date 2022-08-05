@@ -1,12 +1,11 @@
 import React from "react";
-import SearchButton from "./components/SearchButton";
-import SearchInput from "./components/SearchInput";
+import Main from "./pages/Main";
+import GithubProvider from "./providers/GithubProvider";
 
 const App = () => (
-  <>
-    <SearchInput />
-    <SearchButton />
-  </>
+  <GithubProvider>
+    <Main />
+  </GithubProvider>
 );
 
 export default App;
