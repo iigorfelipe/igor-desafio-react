@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import getUser from "../apis/github/request/getUser";
 import GithubContext from "../providers/GithubContext";
 import getRepository from "../apis/github/request/getRepository";
+import "../css/search.css";
 
 const SearchButton = () => {
   const { searchInputValue, setUserInformation } = useContext(GithubContext);
@@ -19,6 +20,7 @@ const SearchButton = () => {
   return (
     <button
       type="button"
+      className="search-button"
       onClick={() => saveUsersInformation(searchInputValue)}
     >
       Buscar
