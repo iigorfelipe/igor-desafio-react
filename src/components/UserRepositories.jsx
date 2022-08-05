@@ -25,9 +25,9 @@ const UserRepositories = () => {
               <span>{repo.description}</span>
               <div className="repository-details">
                 {repo.language && (
-                  <span className="repository-language">
+                  <span>
                     <BiCircle />
-                    {repo.language}
+                    <span className="repository-language">{repo.language}</span>
                   </span>
                 )}
 
