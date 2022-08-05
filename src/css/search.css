@@ -1,3 +1,14 @@
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+}
+
+.search-container div {
+  width: 30%;
+}
+
 .search-label {
   display: flex;
   flex-direction: column;
@@ -6,19 +17,23 @@
 
 .search-input {
   height: 18px;
-  width: 20%;
-  padding: 8px;
+  width: 60%;
+  padding: 9px;
   font-style: italic;
   border: 1px solid;
   border-radius: 5px;
 }
 
 .search-button {
-  height: 38px;
-  padding: 8px;
+  padding: 6px 9px 9px 6px;
   color: white;
   background-color: gray;
   align-items: center;
   border: 1px solid;
   border-radius: 5px;
+  font-size: large;
+}
+
+.icon-search-btn {
+  margin-right: 8px;
 }

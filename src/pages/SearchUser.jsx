@@ -6,8 +6,10 @@ import "../css/main.css";
 const SearchUser = () => {
   return (
     <div className="search-container">
-      <SearchInput />
-      <SearchButton />
+      <div>
+        <SearchInput />
+        <SearchButton />
+      </div>
     </div>
   );
 };
