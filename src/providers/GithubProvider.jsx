@@ -7,6 +7,7 @@ const GithubProvider = ({ children }) => {
   const [userInformation, setUserInformation] = useState({
     infos: "",
     repos: [],
+    stars: [],
   });
 
   return (
