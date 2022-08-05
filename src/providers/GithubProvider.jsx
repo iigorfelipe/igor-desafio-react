@@ -6,7 +6,7 @@ const GithubProvider = ({ children }) => {
   const [searchInputValue, setSearchInputValue] = useState("");
   const [userInformation, setUserInformation] = useState({
     infos: "",
-    repos: "",
+    repos: [],
   });
 
   return (
