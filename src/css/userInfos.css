@@ -36,8 +36,7 @@
   border-radius: 5px;
   font-size: medium;
   padding: 8px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px 0px 20px 0px
 }
 
 .user-followers-container {
