@@ -1,16 +1,17 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
+import GithubContext from "../providers/GithubContext";
 
 const SearchInput = () => {
-  const [text, setText] = useState("");
-  console.log(text);
+  const { searchInputValue, setSearchInputValue } = useContext(GithubContext);
+
   return (
     <label>
       Buscar Repositório no github
       <input
         type="text"
+        value={searchInputValue}
         placeholder="digite o nome do usuário"
-        value={text}
-        onChange={(e) => setText(e.target.value)}
+        onChange={(e) => setSearchInputValue(e.target.value)}
       />
     </label>
   );
