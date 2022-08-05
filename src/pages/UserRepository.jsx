@@ -1,11 +1,15 @@
 import React, { useContext } from "react";
 import GithubContext from "../providers/GithubContext";
 import getDayAndMouth from "../helpers/getDatAndMouth";
+import { BiCircle } from "react-icons/bi";
+import { BsPeople, BsStar } from "react-icons/bs";
+import { AiOutlineMail, AiOutlineBook } from "react-icons/ai";
+import { VscDebugStackframeDot } from "react-icons/vsc";
 import "../css/main.css";
 
 const UserRepository = () => {
   const {
-    userInformation: { infos, repos },
+    userInformation: { infos, repos, stars },
   } = useContext(GithubContext);
 
   return (
@@ -26,18 +30,27 @@ const UserRepository = () => {
               <span>{infos.twitter_username}</span>
 
               <div className="user-followers-container">
-                <span>{infos.followers} followers</span>
-                <span>{infos.following} following</span>
-                <span>{}</span>
+                <span>
+                  <BsPeople />
+                  {infos.followers} followers <VscDebugStackframeDot />
+                  {infos.following} following <VscDebugStackframeDot />
+                  <BsStar />
+                  {stars.length}
+                </span>
               </div>
 
-              <span>{infos.email}</span>
+              {infos.email && (
+                <span>
+                  <AiOutlineMail />
+                  {infos.email}
+                </span>
+              )}
             </div>
           </div>
 
           <div className="repository-container">
             <span className="repository-length">
-              Repositories {infos.public_repos}
+              <AiOutlineBook /> Repositories {infos.public_repos}
             </span>
 
             <div className="repositories">
@@ -45,8 +58,14 @@ const UserRepository = () => {
                 <div key={index} className="repository-infos">
                   <span className="repository-name">{repo.name}</span>
 
+                  <span>{repo.description}</span>
                   <div className="repository-details">
-                    <span className="repository-language">{repo.language}</span>
+                    {repo.language && (
+                      <span className="repository-language">
+                        <BiCircle />
+                        {repo.language}
+                      </span>
+                    )}
 
                     <span>Updated on {getDayAndMouth(repo.created_at)}</span>
                   </div>
