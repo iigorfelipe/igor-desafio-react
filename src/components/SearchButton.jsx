@@ -5,6 +5,7 @@ import GithubContext from "../providers/GithubContext";
 import getRepository from "../apis/github/request/getRepository";
 import { IoIosSearch } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
+import swal from "sweetalert";
 import "../css/search.css";
 
 const SearchButton = () => {
@@ -12,10 +13,6 @@ const SearchButton = () => {
   const navigate = useNavigate();
 
   const saveUsersInformation = async (username) => {
-    if (searchInputValue.length === 0) {
-      alert("informe um nome de usuário válido do github");
-    }
-
     try {
       const dataUser = await getUser(username);
       const dataRepo = await getRepository(username);
@@ -30,8 +27,11 @@ const SearchButton = () => {
       navigate("/repository");
     } catch (error) {
       if (error.code === "ERR_BAD_REQUEST") {
-        alert(
-          "Usuário não encontrado no github. Verifique se você digitou o nome corretamente"
+        console.log(error);
+        swal(
+          `Status: ${error.response.status}`,
+          "Usuário não encontrado no github. Verifique se você digitou o nome corretamente.",
+          "error"
         );
       }
     }
@@ -41,7 +41,15 @@ const SearchButton = () => {
     <button
       type="button"
       className="search-button"
-      onClick={() => saveUsersInformation(searchInputValue)}
+      onClick={() =>
+        searchInputValue.length
+          ? saveUsersInformation(searchInputValue)
+          : swal(
+              "Campo vázio!",
+              "Informe um nome de usuário válido do github.",
+              "warning"
+            )
+      }
     >
       <span className="icon-search-btn">
         <IoIosSearch />
