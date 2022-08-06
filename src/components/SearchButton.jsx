@@ -12,17 +12,29 @@ const SearchButton = () => {
   const navigate = useNavigate();
 
   const saveUsersInformation = async (username) => {
-    const dataUser = await getUser(username);
-    const dataRepo = await getRepository(username);
-    const dataStar = await getStar(username);
+    if (searchInputValue.length === 0) {
+      alert("informe um nome de usuário válido do github");
+    }
 
-    setUserInformation({
-      infos: dataUser,
-      repos: dataRepo,
-      stars: dataStar,
-    });
+    try {
+      const dataUser = await getUser(username);
+      const dataRepo = await getRepository(username);
+      const dataStar = await getStar(username);
 
-    navigate("/repository");
+      setUserInformation({
+        infos: dataUser,
+        repos: dataRepo,
+        stars: dataStar,
+      });
+
+      navigate("/repository");
+    } catch (error) {
+      if (error.code === "ERR_BAD_REQUEST") {
+        alert(
+          "Usuário não encontrado no github. Verifique se você digitou o nome corretamente"
+        );
+      }
+    }
   };
 
   return (
