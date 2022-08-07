@@ -26,13 +26,16 @@ const UserInfos = () => {
           <span>{infos.twitter_username}</span>
 
           <div className="user-followers-container">
-            <span>
-              <BsPeople />
-              {infos.followers} followers <VscDebugStackframeDot />
-              {infos.following} following <VscDebugStackframeDot />
-              <BsStar />
-              {stars.length}
+            <BsPeople />
+            <span className="user-followers">{infos.followers}</span>
+            followers
+            <span className="user-dot-rigth">
+              <VscDebugStackframeDot />
             </span>
+            <span className="user-following">{infos.following}</span>
+            following <VscDebugStackframeDot />
+            <BsStar />
+            <span className="user-stars">{stars.length}</span>
           </div>
 
           {infos.email && (
