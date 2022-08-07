@@ -6,36 +6,47 @@ import { AiOutlineBook } from "react-icons/ai";
 import "../css/userRepositories.css";
 
 const UserRepositories = () => {
-  const {
-    userInformation: { infos, repos },
-  } = useContext(GithubContext);
+  const { userInformation: { infos, repos } } = useContext(GithubContext);
 
   return (
     repos.length && (
       <div className="repository-container">
+
         <span className="repository-length">
+
           <AiOutlineBook /> Repositories
-          <span className="repository-quantity">{infos.public_repos}</span>
+    
+          <span className="repository-quantity">{ infos.public_repos }</span>
+
         </span>
 
         <div className="repositories">
-          {repos.map((repo, index) => (
-            <div key={index} className="repository-infos">
-              <span className="repository-name">{repo.name}</span>
 
-              <span>{repo.description}</span>
-              <div className="repository-details">
-                {repo.language && (
-                  <span>
-                    <BiCircle />
-                    <span className="repository-language">{repo.language}</span>
-                  </span>
-                )}
+          {
+            repos.map((repo, index) => (
+              <div key={ index } className="repository-infos">
 
-                <span>Updated on {getDayAndMouth(repo.created_at)}</span>
+                <span className="repository-name">{ repo.name }</span>
+
+                <span>{ repo.description }</span>
+
+                <div className="repository-details">
+                  { 
+                    repo.language && (
+                      <span>
+
+                        <BiCircle />
+                        <span className="repository-language">{ repo.language }</span>
+
+                      </span>
+                    )
+                  }
+                  <span>Updated on { getDayAndMouth(repo.created_at) }</span>
+                </div>
               </div>
-            </div>
-          ))}
+            ))
+          }
+
         </div>
       </div>
     )

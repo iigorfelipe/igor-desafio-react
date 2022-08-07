@@ -7,7 +7,9 @@ const SearchInput = () => {
 
   return (
     <label>
+  
       <span className="search-label">Buscar Repositório no github</span>
+  
       <input
         type="text"
         className="search-input"
@@ -15,6 +17,7 @@ const SearchInput = () => {
         placeholder="digite o nome do usuário"
         onChange={(e) => setSearchInputValue(e.target.value)}
       />
+
     </label>
   );
 };

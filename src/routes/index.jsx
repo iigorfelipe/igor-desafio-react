@@ -6,8 +6,10 @@ import Main from "../pages/Main";
 const AppRoutes = () => (
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<SearchUser />} />
-      <Route path="/repository" element={<Main />} />
+  
+      <Route path="/" element={ <SearchUser /> } />
+      <Route path="/repository" element={ <Main /> } />
+
     </Routes>
   </BrowserRouter>
 );
