@@ -7,10 +7,10 @@ const SearchUser = () => {
   return (
     <div className="search-container">
       <div>
-  
+
         <SearchInput />
         <SearchButton />
-  
+
       </div>
     </div>
   );

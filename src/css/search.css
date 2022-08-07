@@ -2,11 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 75vh;
+  height: 100vh;
 }
 
 .search-container div {
-  width: 30%;
+  display: flex;
+  align-items: flex-end;
 }
 
 .search-label {
@@ -17,7 +18,7 @@
 
 .search-input {
   height: 18px;
-  width: 60%;
+  width: 100%;
   padding: 9px;
   font-style: italic;
   border: 1px solid;
@@ -26,12 +27,14 @@
 
 .search-button {
   padding: 6px 9px 9px 6px;
+  height: 40px;
   color: white;
   background-color: gray;
   align-items: center;
   border: 1px solid;
   border-radius: 5px;
   font-size: large;
+  margin-left: 20px;
 }
 
 .icon-search-btn {
