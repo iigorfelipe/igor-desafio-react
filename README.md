@@ -16,7 +16,19 @@
 
 ## Intalling
 
-<!-- tools -->
+- npm
+
+```
+git clone repo
+```
+
+```
+cd desafioatlas
+```
+
+```
+npm install
+```
 
 ## References
 
