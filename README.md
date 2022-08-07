@@ -30,6 +30,14 @@ cd desafioatlas
 npm install
 ```
 
+## Local Usage
+
+- npm
+
+```
+npm run start
+```
+
 ## References
 
 <!-- tools -->
