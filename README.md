@@ -2,7 +2,7 @@
 
 <p align="center">
   <i>
-    This is a repository used to carry out an <a href="https://www.atlasgr.com.br/">Atlas</a> technical challenge where I was asked to develop a React app that would show a user's profile and list their github repositories.
+    This is a repository used to carry out an <a href="https://www.atlasgr.com.br/">Atlas</a> technical challenge.
   </i>
 </p>
 
@@ -10,7 +10,7 @@
 
 ##  About this project
 
-<!-- about -->
+Application that consumes the github API to fetch the profile and all public repositories of any github user. The user's Email and Twitter will not be rendered if it is not public information
 
 ## Technologies
 
