@@ -12,8 +12,14 @@
 
 ## Technologies
 
-<!-- technologies -->
-                                                                                                  
+<p>
+
+  <img width="48" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png" alt="react-logo"/>
+  <img width="48" src="https://www.freepnglogos.com/uploads/javascript-png/javascript-vector-logo-yellow-png-transparent-javascript-vector-12.png" alt="javascript-logo"/>
+
+</p>
+
+
 ## Development Tools
 
 <!-- tools -->
