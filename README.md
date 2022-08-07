@@ -35,7 +35,7 @@
 - npm
 
 ```
-git clone repo
+git clone https://github.com/iigorfelipe/igor-desafio-react.git
 ```
 
 ```
