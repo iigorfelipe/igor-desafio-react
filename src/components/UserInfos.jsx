@@ -25,7 +25,13 @@ const UserInfos = () => {
 
         <div className="user-details-container">
 
-          <span>{ infos.twitter_username }</span>
+          {
+            infos.twitter_username && (
+              <span className="user-twitter">
+                @{ infos.twitter_username }
+              </span>
+            )
+          }
 
           <div className="user-followers-container">
 
