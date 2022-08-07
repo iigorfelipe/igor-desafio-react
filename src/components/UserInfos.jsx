@@ -50,7 +50,7 @@ const UserInfos = () => {
               <span>
 
                 <AiOutlineMail />
-                { "infos.email" }
+                { infos.email }
 
               </span>
             )
