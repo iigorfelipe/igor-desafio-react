@@ -1,4 +1,4 @@
-# Atlas Challenge
+<h1>Atlas Challenge</h1>
 
 <!-- img app -->
 
