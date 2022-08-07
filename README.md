@@ -6,7 +6,12 @@
   </i>
 </p>
 
-<!-- img app -->
+<div align="center">
+  <img width="100%" src="https://user-images.githubusercontent.com/87145566/183307128-d5470b87-d522-4438-9108-8b042bed1166.png" />
+</div>
+
+----------------------------------
+
 
 ##  About this project
 
