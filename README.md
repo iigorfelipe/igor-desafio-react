@@ -56,4 +56,16 @@ npm run start
 
 ## References
 
-<!-- tools -->
+- [Axios - Docs](https://axios-http.com/ptbr/docs/intro)
+
+- [Sweet Alert - Docs](https://sweetalert.js.org/guides/)
+
+- [Hora de codar - Blog](https://www.horadecodar.com.br/2021/08/06/como-pegar-o-mes-da-data-em-javascript/)
+
+- [Github - Docs](https://docs.github.com/en/rest)
+
+- [Github User - Api](https://api.github.com/users/username)
+
+- [Github Repositories - Api](https://api.github.com/users/username/repos)
+
+__obs: change "username" to the user you want to fetch from github api__
