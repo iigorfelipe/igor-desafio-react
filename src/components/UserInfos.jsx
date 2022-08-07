@@ -27,7 +27,7 @@ const UserInfos = () => {
 
           {
             infos.twitter_username && (
-              <span className="user-twitter">
+              <span>
                 @{ infos.twitter_username }
               </span>
             )
