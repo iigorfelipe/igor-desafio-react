@@ -2,15 +2,20 @@
 
 <p align="center">
   <i>
-    This is a repository used to carry out an <a href="https://www.atlasgr.com.br/">Atlas</a> technical challenge where I was asked to develop a React app that would show a user's profile and list their github repositories.
+    This is a repository used to carry out an <a href="https://www.atlasgr.com.br/">Atlas</a> technical challenge.
   </i>
 </p>
 
-<!-- img app -->
+<div align="center">
+  <img width="100%" src="https://user-images.githubusercontent.com/87145566/183307128-d5470b87-d522-4438-9108-8b042bed1166.png" />
+</div>
+
+----------------------------------
+
 
 ##  About this project
 
-<!-- about -->
+Application that consumes the github API to fetch the profile and all public repositories of any github user. The user's Email and Twitter will not be rendered if it is not public information
 
 ## Technologies
 
@@ -35,7 +40,7 @@
 - npm
 
 ```
-git clone repo
+git clone https://github.com/iigorfelipe/igor-desafio-react.git
 ```
 
 ```

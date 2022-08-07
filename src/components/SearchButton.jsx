@@ -10,9 +10,11 @@ import "../css/search.css";
 
 const SearchButton = () => {
   const { searchInputValue, setUserInformation } = useContext(GithubContext);
+
   const navigate = useNavigate();
 
   const saveUsersInformation = async (username) => {
+
     try {
       const dataUser = await getUser(username);
       const dataRepo = await getRepository(username);
@@ -25,9 +27,11 @@ const SearchButton = () => {
       });
 
       navigate("/repository");
+
     } catch (error) {
+
       if (error.code === "ERR_BAD_REQUEST") {
-        console.log(error);
+
         swal(
           `Status: ${error.response.status}`,
           "Usuário não encontrado no github. Verifique se você digitou o nome corretamente.",
@@ -45,15 +49,13 @@ const SearchButton = () => {
         searchInputValue.length
           ? saveUsersInformation(searchInputValue)
           : swal(
-              "Campo vázio!",
-              "Informe um nome de usuário válido do github.",
-              "warning"
-            )
+            "Campo vázio!",
+            "Informe um nome de usuário válido do github.",
+            "warning"
+          )
       }
     >
-      <span className="icon-search-btn">
-        <IoIosSearch />
-      </span>
+      <span className="icon-search-btn"><IoIosSearch /></span>
       Buscar
     </button>
   );

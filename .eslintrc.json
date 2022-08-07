@@ -20,6 +20,6 @@
         "react", "prettier"
     ],
     "rules": {
-        "prettier/prettier": "error"
+        "indent": "error"
     }
 }

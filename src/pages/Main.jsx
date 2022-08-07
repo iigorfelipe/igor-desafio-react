@@ -6,8 +6,10 @@ import "../css/main.css";
 const UserRepository = () => {
   return (
     <div className="main-container">
+
       <UserInfos />
       <UserRepositories />
+
     </div>
   );
 };

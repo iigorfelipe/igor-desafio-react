@@ -12,12 +12,14 @@ const GithubProvider = ({ children }) => {
 
   return (
     <GithubContext.Provider
-      value={{
-        setSearchInputValue,
-        searchInputValue,
-        userInformation,
-        setUserInformation,
-      }}
+      value={
+        {
+          searchInputValue,
+          setSearchInputValue,
+          userInformation,
+          setUserInformation,
+        }
+      }
     >
       {children}
     </GithubContext.Provider>

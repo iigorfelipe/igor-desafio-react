@@ -41,6 +41,17 @@
 
 .user-followers-container {
   display: flex;
-  justify-content: space-between;
   padding-bottom: 20px;
+  margin-top: 20px;
+}
+
+.user-followers,
+.user-following,
+.user-stars {
+  margin: 0px 5px;
+  font-weight: 500;
+}
+
+.user-dot-left {
+  margin-right: -5px;
 }
