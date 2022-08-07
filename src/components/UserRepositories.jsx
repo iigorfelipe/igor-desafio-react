@@ -14,7 +14,8 @@ const UserRepositories = () => {
     repos.length && (
       <div className="repository-container">
         <span className="repository-length">
-          <AiOutlineBook /> Repositories {infos.public_repos}
+          <AiOutlineBook /> Repositories
+          <span className="repository-quantity">{infos.public_repos}</span>
         </span>
 
         <div className="repositories">
