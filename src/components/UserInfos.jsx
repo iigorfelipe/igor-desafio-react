@@ -27,9 +27,9 @@ const UserInfos = () => {
 
           {
             infos.twitter_username && (
-              <span>
+              <a href={`https://twitter.com/${ infos.twitter_username }`}>
                 @{ infos.twitter_username }
-              </span>
+              </a>
             )
           }
 
