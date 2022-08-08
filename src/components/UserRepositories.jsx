@@ -26,12 +26,12 @@ const UserRepositories = () => {
             repos.map((repo, index) => (
               <div key={ index } className="repository-infos">
 
-                <span className="repository-name">{ repo.name }</span>
+                <a className="repository-name" href={ repo.html_url }>{ repo.name }</a>
 
                 <span>{ repo.description }</span>
 
                 <div className="repository-details">
-                  { 
+                  {
                     repo.language && (
                       <span>
 
