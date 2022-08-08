@@ -1,6 +1,5 @@
 .repository-container {
-  width: 100%;
-  padding-top: 10px;
+  padding: 10px 25px 0px 0px;
   margin-left: 20px;
 }
 
@@ -42,4 +41,16 @@
 .repository-language {
   margin: 0px 20px 0px 5px;
   align-items: center;
+}
+
+@media only screen and (max-width: 750px) {
+  .repository-container {
+    padding: 0px;
+    margin: 20px 0px 0px 0px;
+    text-align: center;
+  }
+
+  .repositories {
+    padding-top:  0px;
+  }
 }
